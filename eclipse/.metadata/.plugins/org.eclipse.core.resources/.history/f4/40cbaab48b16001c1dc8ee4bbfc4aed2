@@ -1,0 +1,11 @@
+package vclient.hud.mod.impl;
+
+import vclient.hud.mod.HudMod;
+
+public class Keystrokes extends HudMod {
+
+	public Keystrokes() {
+		super(name, x, y);
+	}
+	
+}

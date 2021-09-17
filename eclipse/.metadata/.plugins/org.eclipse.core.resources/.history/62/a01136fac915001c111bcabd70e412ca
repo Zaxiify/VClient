@@ -1,0 +1,25 @@
+package vclient.hud.mod;
+
+import java.util.ArrayList;
+
+import vclient.hud.mod.impl.TestMod;
+
+public class HudManager {
+	
+	public ArrayList<HudMod> hudMods = new ArrayList<>();
+	
+	public HudManager() {
+		
+		hudMods.add(new TestMod());
+		h
+		
+		
+	}
+	
+	public void renderMods() {
+		for(HudMod m : hudMods) {
+			m.draw();
+		}
+	}
+	
+}

@@ -1,0 +1,27 @@
+package vclient.ui.clickgui;
+
+import java.io.IOException;
+import java.util.ArrayList;
+
+import net.minecraft.client.gui.Gui;
+import net.minecraft.client.gui.GuiScreen;
+import vclient.ui.clickgui.comp.ModButton;
+
+public class ClickGUI extends GuiScreen {
+	
+	ArrayList<ModButton> modButtons = new ArrayList<>();
+	
+	@Override
+	public void drawScreen(int mouseX, int mouseY, float partialTicks) {
+		ScaledResolution sr = new ScaledResolution(mc);
+		super.drawScreen(mouseX, mouseY, partialTicks);
+		
+		Gui.drawRect(200, 50, mouseY, mouseX, mouseY)
+	}
+	
+	@Override
+	protected void mouseClicked(int mouseX, int mouseY, int mouseButton) throws IOException {
+		super.mouseClicked(mouseX, mouseY, mouseButton);
+	}
+
+}

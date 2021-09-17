@@ -1,0 +1,5 @@
+package vclient.hud.mod.impl;
+
+public class Keystrokes {
+
+}

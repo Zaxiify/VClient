@@ -1,0 +1,51 @@
+package vclient.hud.mod.impl;
+
+import java.awt.Color;
+
+import net.minecraft.client.gui.Gui;
+import net.minecraft.entity.EntityLivingBase;
+import vclient.hud.mod.HudMod;
+
+public class TargetHUD extends HudMod{
+	
+	EntityLivingBase target;
+
+	public TargetHUD() {
+		super("TargetHUD", 5, 5);
+		// TODO Auto-generated constructor stub
+	}
+	
+	@Override
+	public void draw() {
+		renderTargetHud();
+		
+		super.draw();
+	}
+	
+	@Override
+	public void renderDummy(int mouseX, int mouseY) {
+		
+		fr.drawStringWithShadow(target.getName(), getX() + 2, getY() + 2, -1);
+		fr.drawStringWithShadow(target.getHealth() + " \u2764", getX() + 2, getY() + 2 + fr.FONT_HEIGHT, -1);
+		
+		super.renderDummy(mouseX, mouseY);
+	}
+	
+	@Override
+	public int getWidth() {
+		return 100;
+	}
+	
+	@Override
+	public int getHeight() {
+		return fr.FONT_HEIGHT * 3 + 4;
+	}
+	
+	private void renderTargetHud() {
+		target = (EntityLivingBase) mc.pointedEntity;
+		
+		fr.drawStringWithShadow(target.getName(), getX() + 2, getY() + 2, -1);
+		fr.drawStringWithShadow(target.getHealth() + " \u2764", getX() + 2, getY() + 2 + fr.FONT_HEIGHT, -1);
+	}
+
+}

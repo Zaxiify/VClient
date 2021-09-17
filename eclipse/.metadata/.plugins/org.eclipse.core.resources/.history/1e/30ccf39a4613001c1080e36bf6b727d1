@@ -1,0 +1,5 @@
+package vclient.event.impl;
+
+public class EventUpdate {
+
+}

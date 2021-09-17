@@ -1,0 +1,15 @@
+package vclient;
+
+public class Client {
+	
+	private static final Client INSTANCE = new Client();
+	
+	public void init() {
+		
+	}
+	
+	public void shutdown() {
+		
+	}
+	
+}

@@ -1,0 +1,12 @@
+package vclient.hud.mod.impl;
+
+import vclient.hud.mod.HudMod;
+
+public class TestMod extends HudMod{
+
+	public TestMod("testMod", 5, 5) {
+		super(name, x, y);
+		// TODO Auto-generated constructor stub
+	}
+
+}

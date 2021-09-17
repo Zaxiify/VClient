@@ -1,0 +1,9 @@
+package vclient.mod;
+
+public enum Category {
+
+	HUD,
+	WORLD,
+	COSMETIC;
+	
+}

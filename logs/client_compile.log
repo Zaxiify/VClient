@@ -1,0 +1,5 @@
+src\minecraft\vclient\mod\ModManager.java:15: error: diamond operator is not supported in -source 1.6
+		mods = new ArrayList<>();
+		                     ^
+  (use -source 7 or higher to enable diamond operator)
+1 error

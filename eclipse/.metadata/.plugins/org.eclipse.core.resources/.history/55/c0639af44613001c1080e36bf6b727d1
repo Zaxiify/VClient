@@ -1,0 +1,7 @@
+package vclient.mod;
+
+public class Mod {
+	
+	public String name, description;
+	
+}

@@ -1,0 +1,19 @@
+package vclient.mod.impl;
+
+import vclient.mod.Category;
+import vclient.mod.Mod;
+
+public class ToggleSprint extends Mod {
+	
+	public ToggleSprint() {
+		super("ToggleSprint", "Toggle your sprinting status", Category.MISC);
+	}
+	
+	@Override
+	public void onEnable() {
+		super.onEnable();
+		
+		System.out.println("THIS MOD IS ONNNNN!!");
+	}
+	
+}

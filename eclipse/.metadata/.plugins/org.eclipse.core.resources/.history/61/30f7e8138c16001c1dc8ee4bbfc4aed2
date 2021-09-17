@@ -1,0 +1,25 @@
+package vclient.hud.mod.impl;
+
+import net.minecraft.client.settings.KeyBinding;
+import vclient.hud.mod.HudMod;
+
+public class Keystrokes extends HudMod {
+
+	public Keystrokes() {
+		super("Keystrokes", 500, 100);
+	}
+	
+	public static class Key {
+				
+		private final String name;
+		private final KeyBinding keyBind;
+		private final int x,y,width,height;
+		
+		public Key(String name, KeyBinding keyBind, int x, int y, int w, int h;) {
+			this.name = name;
+			this.keyBind = keyBind;
+			this.x = x;
+		}
+	}
+	
+}

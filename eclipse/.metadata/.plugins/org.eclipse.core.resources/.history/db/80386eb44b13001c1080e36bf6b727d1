@@ -1,0 +1,21 @@
+package vclient.mod;
+
+import java.util.ArrayList;
+
+import vclient.mod.impl.*;
+
+public class ModManager {
+	
+	public TestMod testMod;
+
+	public ArrayList<Mod> mods;
+	
+	public ModManager() {
+		mods = new ArrayList<>();
+		
+		//Misc
+		mods.add(new TestMod());
+		
+	}
+	
+}

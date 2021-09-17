@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="vclient.event.EventManager"/>
+    <fullyQualifiedTypeName name="vclient.event.Event"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="vclient.mod.Mod"/>
+    <fullyQualifiedTypeName name="vclient.mod.Category"/>
+    <fullyQualifiedTypeName name="vclient.mod.ModManager"/>
+    <fullyQualifiedTypeName name="vclient.mod.impl.TestMod"/>
+    <fullyQualifiedTypeName name="vclient.event.impl.ClientTick"/>
+    <fullyQualifiedTypeName name="vclient.event.EventTarget"/>
+    <fullyQualifiedTypeName name="vclient.event.impl.EventUpdate"/>
+    <fullyQualifiedTypeName name="vclient.cosmetics.CapeChecker"/>
+    <fullyQualifiedTypeName name="vclient.util.SessionChanger"/>
+    <fullyQualifiedTypeName name="net.minecraft.util.ResourceLocation"/>
+    <fullyQualifiedTypeName name="vclient.ui.MainMenu"/>
+    <fullyQualifiedTypeName name="net.minecraft.client.gui.GuiButton"/>
+    <fullyQualifiedTypeName name="net.minecraft.client.gui.GuiSelectWorld"/>
+    <fullyQualifiedTypeName name="net.minecraft.client.gui.GuiMultiplayer"/>
+    <fullyQualifiedTypeName name="net.minecraft.client.gui.GuiOptions"/>
+    <fullyQualifiedTypeName name="net.minecraft.client.renderer.GlStateManager"/>
+    <fullyQualifiedTypeName name="net.minecraft.client.gui.GuiScreen"/>
+    <fullyQualifiedTypeName name="vclient.hud.DraggableComponent"/>
+    <fullyQualifiedTypeName name="vclient.hud.mod.HudManager"/>
+    <fullyQualifiedTypeName name="vclient.hud.mod.impl.TestMod"/>
+    <fullyQualifiedTypeName name="vclient.hud.HUDConfigScreen"/>
+    <fullyQualifiedTypeName name="vclient.hud.mod.impl.FPSMod"/>
+    <fullyQualifiedTypeName name="net.minecraft.entity.EntityLivingBase"/>
+    <fullyQualifiedTypeName name="vclient.hud.mod.impl.TargetHUD"/>
+    <fullyQualifiedTypeName name="net.minecraft.client.gui.inventory.GuiInventory"/>
+    <fullyQualifiedTypeName name="vclient.hud.mod.impl.PlayerModelHUD"/>
+    <fullyQualifiedTypeName name="net.arikia.dev.drpc.DiscordEventHandlers"/>
+    <fullyQualifiedTypeName name="net.arikia.dev.drpc.DiscordEventHandlers.Builder"/>
+    <fullyQualifiedTypeName name="net.arikia.dev.drpc.callbacks.ReadyCallback"/>
+    <fullyQualifiedTypeName name="net.arikia.dev.drpc.DiscordRichPresence"/>
+    <fullyQualifiedTypeName name="net.arikia.dev.drpc.DiscordRichPresence.Builder"/>
+    <fullyQualifiedTypeName name="vclient.Client"/>
+    <fullyQualifiedTypeName name="net.minecraft.client.Minecraft"/>
+    <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
+    <fullyQualifiedTypeName name="net.minecraft.client.gui.Gui"/>
+    <fullyQualifiedTypeName name="java.awt.Color"/>
+    <fullyQualifiedTypeName name="vclient.ui.clickgui.comp.ModButton"/>
+    <fullyQualifiedTypeName name="vclient.VClient"/>
+    <fullyQualifiedTypeName name="net.minecraft.client.entity.AbstractClientPlayer"/>
+    <fullyQualifiedTypeName name="org.lwjgl.opengl.Display"/>
+</qualifiedTypeNameHistroy>

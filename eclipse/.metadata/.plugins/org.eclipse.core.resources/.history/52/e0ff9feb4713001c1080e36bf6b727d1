@@ -1,0 +1,40 @@
+package vclient.mod;
+
+import vclient.VClient;
+
+public class Mod {
+	
+	public String name, description;
+	public boolean enabled;
+	public Category category;
+	
+	public Mod(String name, String description, Category category) {
+		
+		this.name = name;
+		this.description = description;
+		this.category = category;
+		
+		this.enabled = true;
+		
+	}
+	
+	private void onEnable() {
+		
+		VClient.INSTANCE.eventManager.register(this);
+		
+	}
+	
+	private void onDisable() {
+		
+		VClient.INSTANCE.eventManager.unregister(this);
+		
+	}
+	
+	public void setEnabled(boolean enabled) {
+		this.enabled = enabled;
+		if(enabled) {
+			onEnable();
+		}
+	}
+	
+}

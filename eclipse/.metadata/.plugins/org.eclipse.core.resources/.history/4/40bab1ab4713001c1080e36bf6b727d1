@@ -1,0 +1,19 @@
+package vclient.mod;
+
+public class Mod {
+	
+	public String name, description;
+	public boolean enabled;
+	public Category category;
+	
+	public Mod(String name, String description, Category category) {
+		
+		this.name = name;
+		this.description = description;
+		this.category = category;
+		
+		this.enabled = true;
+		
+	}
+	
+}

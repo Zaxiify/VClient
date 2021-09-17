@@ -1,0 +1,24 @@
+package vclient.cosmetics;
+
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.entity.AbstractClientPlayer;
+
+public class CapeChecker {
+	
+	public static boolean ownsCape(AbstractClientPlayer entitylivingbaseIn) {
+		if(entitylivingbaseIn.getName().equals("installdotexe")) {
+			return true;
+		} else if(entitylivingbaseIn.getName().equals("sotp1rhs")) {
+			return true;
+		} else if(entitylivingbaseIn.getName().equals("MisterSparkz")) {
+			return true;
+		}
+		
+		
+		
+		
+		
+		else return false;
+	}
+	
+}
