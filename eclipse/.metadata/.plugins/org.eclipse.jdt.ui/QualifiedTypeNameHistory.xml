@@ -35,7 +35,6 @@
     <fullyQualifiedTypeName name="net.arikia.dev.drpc.DiscordRichPresence"/>
     <fullyQualifiedTypeName name="net.arikia.dev.drpc.DiscordRichPresence.Builder"/>
     <fullyQualifiedTypeName name="vclient.Client"/>
-    <fullyQualifiedTypeName name="net.minecraft.client.Minecraft"/>
     <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
     <fullyQualifiedTypeName name="net.minecraft.client.gui.Gui"/>
     <fullyQualifiedTypeName name="java.awt.Color"/>
@@ -43,4 +42,7 @@
     <fullyQualifiedTypeName name="vclient.VClient"/>
     <fullyQualifiedTypeName name="net.minecraft.client.entity.AbstractClientPlayer"/>
     <fullyQualifiedTypeName name="org.lwjgl.opengl.Display"/>
+    <fullyQualifiedTypeName name="net.minecraft.client.Minecraft"/>
+    <fullyQualifiedTypeName name="vclient.hud.mod.impl.CPSMod"/>
+    <fullyQualifiedTypeName name="net.minecraft.client.entity.EntityPlayerSP"/>
 </qualifiedTypeNameHistroy>

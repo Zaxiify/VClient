@@ -1,0 +1,12 @@
+package vclient.util.config;
+
+import java.io.File;
+
+public class Config {
+	
+	public File configFolder = new File("VClient");
+	public File modsFolder = new File("VClient/Mods");
+	
+	public Configuration config, configToSave = ConfigurationAPI.newConfiguration(new File("VClient/Mods/ModConfiguration.vc"))
+
+}

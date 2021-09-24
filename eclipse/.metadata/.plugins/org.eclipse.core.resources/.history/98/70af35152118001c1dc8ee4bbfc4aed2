@@ -1,0 +1,27 @@
+package vclient;
+
+import net.arikia.dev.drpc.*;
+
+
+public class DiscordRP {
+	
+	private boolean running = true;
+	private long created = 0;
+	
+	public void start() {
+		
+		this.created = System.currentTimeMillis();
+		
+		DiscordEventHandlers handlers = new DiscordEventHandlers.Builder().setReadyEventHandler(new ReadyCallback)
+		
+	}
+	
+	public void shutdown() {
+		
+	}
+	
+	public void update(String firstLine, String secondLine) {
+		
+	}
+	
+}

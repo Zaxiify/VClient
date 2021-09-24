@@ -11,6 +11,7 @@ import vclient.hud.mod.HudManager;
 import vclient.mod.ModManager;
 import vclient.ui.clickgui.ClickGUI;
 import vclient.util.SessionChanger;
+import vclient.util.config.Config;
 
 public class VClient {
 	
@@ -22,15 +23,20 @@ public class VClient {
 	public Minecraft mc = Minecraft.getMinecraft();
 	
 	public EventManager eventManager;
+	public Config config;
 	public ModManager modManager;
 	public HudManager hudManager;
 	
 	public void startup() {
 		eventManager = new EventManager();
+		config = new Config();
 		modManager = new ModManager();
 		hudManager = new HudManager();
 		
-		SessionChanger.getInstance().setUserOffline("_everythingg");
+		// SET "username" TO SOMEONE WHO YOU WANT TO TEST AS!!!! also uncomment it you dumb fuck of a human being
+		//SessionChanger.getInstance().setUserOffline("username");
+		
+		config.loadModConfig();
 		
 		Display.setTitle(NAMEVER);
 		
@@ -41,7 +47,7 @@ public class VClient {
 		
 	public void shutdown() {
 		System.out.println("Shutting down " + NAMEVER);
-		
+		config.saveModConfig();
 		eventManager.unregister(this);
 	}
 	
@@ -53,6 +59,9 @@ public class VClient {
 		if(mc.gameSettings.keyBindSprint.isPressed()) {
 			modManager.toggleSprint.toggle();
 		}
+		
+		//GOD DAMN IT I CANT D)OO IT uHGGGGGGGGGFVUIsjgkdfnmdvfbldfkbmnfkjg
+		
 		if(mc.gameSettings.HUD_CONFIG.isPressed()) {
 			mc.displayGuiScreen(new HUDConfigScreen());
 		}

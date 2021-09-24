@@ -1,7 +1,0 @@
-package vclient.hud;
-
-import net.minecraft.client.gui.GuiScreen;
-
-public class HUDConfigScreen extends GuiScreen {
-
-}

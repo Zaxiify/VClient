@@ -1,7 +1,0 @@
-package vclient.cosmetics;
-
-public class CapeChecker {
-	
-	public boolean ownsCape;
-	
-}

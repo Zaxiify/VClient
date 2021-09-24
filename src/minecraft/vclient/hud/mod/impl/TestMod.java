@@ -4,12 +4,16 @@ import java.awt.Color;
 
 import net.minecraft.client.gui.Gui;
 import vclient.hud.mod.HudMod;
+import vclient.setting.*;
 
 public class TestMod extends HudMod{
+	
+	BooleanSetting test = new BooleanSetting("Test", true);
+	ModeSetting testMode = new ModeSetting("Test Mode", "Mode1", "Mode2");
 
 	public TestMod() {
 		super("testMod", 5, 5);
-		// TODO Auto-generated constructor stub
+//		this.addSettings(test,testMode);
 	}
 	
 	@Override

@@ -1,0 +1,7 @@
+package vclient.util.config;
+
+public class Config {
+	
+	public File configFolder = new File("VClient");
+
+}

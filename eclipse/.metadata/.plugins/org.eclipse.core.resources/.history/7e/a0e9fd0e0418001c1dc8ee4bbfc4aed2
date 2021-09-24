@@ -1,0 +1,5 @@
+package vclient.util.config;
+
+public class ConfigurationAPI {
+
+}

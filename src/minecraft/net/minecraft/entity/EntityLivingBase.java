@@ -12,6 +12,7 @@ import java.util.UUID;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.ai.attributes.BaseAttributeMap;
@@ -2157,8 +2158,13 @@ public abstract class EntityLivingBase extends Entity
     /**
      * interpolated look vector
      */
+    
+    //MOUSE DELAY FIX!!11!1!!!1111!
     public Vec3 getLook(float partialTicks)
     {
+        if (this instanceof EntityPlayerSP) {
+            return super.getLook(partialTicks);
+        }
         if (partialTicks == 1.0F)
         {
             return this.getVectorForRotation(this.rotationPitch, this.rotationYawHead);

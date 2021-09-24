@@ -1,0 +1,7 @@
+package vclient.hud.mod.impl;
+
+public class CPSMod {
+	
+	public mc = Minecraft.getMinecraft();
+	
+}

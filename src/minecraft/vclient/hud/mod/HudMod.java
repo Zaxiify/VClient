@@ -1,15 +1,21 @@
 package vclient.hud.mod;
 
 import java.awt.Color;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;
+import vclient.VClient;
 import vclient.hud.DraggableComponent;
+import vclient.setting.Setting;
 
 public class HudMod {
 	
 	public Minecraft mc = Minecraft.getMinecraft();
 	public FontRenderer fr = mc.fontRendererObj;
+	
+	public ArrayList<Setting> settings;
 	
 	public String name;
 	public boolean enabled;
@@ -21,10 +27,23 @@ public class HudMod {
 	
 	public HudMod(String name, int x, int y) {
 		this.name = name;
-		this.x = x;
-		this.y = y;
+		try {
+			//this.x = (int) VClient.INSTANCE.config.config.get(name.toLowerCase() + " x");
+			//this.y = (int) VClient.INSTANCE.config.config.get(name.toLowerCase() + " y");
+			//this.setEnabled((boolean) VClient.INSTANCE.config.config.get(name.toLowerCase() + " enabled"));
+		} catch (NullPointerException e) {
+			//this.x = x;
+			//this.y = y;
+			//this.enabled = false;
+			//System.err.println("Mods not loaded. Please check any dirty code. If that doesn't work, idk. Go ask zaxify or something.");
+		}
 		
-		drag = new DraggableComponent(x, y, getWidth(), getHeight(), new Color(0, 0, 0, 0).getRGB());
+		settings = new ArrayList<Setting>();
+		drag = new DraggableComponent(this.x, this.y, getWidth(), getHeight(), new Color(0, 0, 0, 0).getRGB());
+	}
+	
+	public void addSettings(Setting...sets) {
+//		this.settings.add((Setting) Arrays.asList(sets));
 	}
 	
 	public int getWidth() {

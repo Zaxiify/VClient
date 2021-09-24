@@ -1,0 +1,13 @@
+package vclient;
+
+public class Client {
+	
+	public void init() {
+		
+	}
+	
+	public void shutdown() {
+		
+	}
+	
+}

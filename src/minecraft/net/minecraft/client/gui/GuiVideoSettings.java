@@ -18,7 +18,7 @@ import shadersmod.client.GuiShaders;
 public class GuiVideoSettings extends GuiScreen
 {
     private GuiScreen parentGuiScreen;
-    protected String screenTitle = "Video Settings";
+    protected String screenTitle = "About";
     private GameSettings guiGameSettings;
 
     /** An array of all of GameSettings.Options's video options. */
@@ -179,7 +179,7 @@ public class GuiVideoSettings extends GuiScreen
     {
         this.drawDefaultBackground();
         this.drawCenteredString(this.fontRendererObj, this.screenTitle, this.width / 2, 15, 16777215);
-        String s = Config.getVersion();
+        String s = "Vex Client";
         String s1 = "HD_U";
 
         if (s1.equals("HD"))
@@ -189,7 +189,7 @@ public class GuiVideoSettings extends GuiScreen
 
         if (s1.equals("HD_U"))
         {
-            s = "OptiFine HD H8 Ultra";
+            s = "Optifine HD H8 Ultra included!";
         }
 
         if (s1.equals("L"))
@@ -198,7 +198,7 @@ public class GuiVideoSettings extends GuiScreen
         }
 
         this.drawString(this.fontRendererObj, s, 2, this.height - 10, 8421504);
-        String s2 = "Minecraft 1.8.8";
+        String s2 = "Vex Client DEV";
         int i = this.fontRendererObj.getStringWidth(s2);
         this.drawString(this.fontRendererObj, s2, this.width - i - 2, this.height - 10, 8421504);
         super.drawScreen(mouseX, mouseY, partialTicks);

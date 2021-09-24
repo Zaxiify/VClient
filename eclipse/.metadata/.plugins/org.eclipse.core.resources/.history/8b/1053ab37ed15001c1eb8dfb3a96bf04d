@@ -1,7 +1,0 @@
-package vclient.ui.clickgui.comp;
-
-public class ModButton {
-
-	public int x, y, w, h;
-	
-}

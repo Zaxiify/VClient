@@ -1,0 +1,5 @@
+package vclient.settings;
+
+public class ModeSettings {
+
+}

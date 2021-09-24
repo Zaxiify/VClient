@@ -1,0 +1,9 @@
+package vclient.util.config;
+
+import java.io.File;
+
+public class Config {
+	
+	public File configFolder = new File("VClient");
+
+}

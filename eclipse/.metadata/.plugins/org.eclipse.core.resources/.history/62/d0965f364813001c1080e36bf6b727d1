@@ -1,7 +1,0 @@
-package vclient.mod;
-
-public class ModManager {
-
-	public ArrayList<Mod> mod;
-	
-}
