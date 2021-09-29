@@ -18,8 +18,9 @@ public class ClickGUI extends GuiScreen {
 	public void initGui() {
 		this.modButtons.add(new ModButton(210, 60, 44, mc.fontRendererObj.FONT_HEIGHT + 5, VClient.INSTANCE.hudManager.testMod));
 		this.modButtons.add(new ModButton(270, 60, 55, mc.fontRendererObj.FONT_HEIGHT + 5, VClient.INSTANCE.hudManager.targetHud));
-		this.modButtons.add(new ModButton(350, 60, 22, mc.fontRendererObj.FONT_HEIGHT + 5, VClient.INSTANCE.hudManager.fps));
-		this.modButtons.add(new ModButton(420, 60, 22, mc.fontRendererObj.FONT_HEIGHT + 5, VClient.INSTANCE.hudManager.keystrokes));
+		this.modButtons.add(new ModButton(350, 60, 66, mc.fontRendererObj.FONT_HEIGHT + 5, VClient.INSTANCE.hudManager.fps));
+		this.modButtons.add(new ModButton(350, 60, 77, mc.fontRendererObj.FONT_HEIGHT + 5, VClient.INSTANCE.hudManager.cps));
+		this.modButtons.add(new ModButton(420, 60, 88, mc.fontRendererObj.FONT_HEIGHT + 5, VClient.INSTANCE.hudManager.keystrokes));
 		super.initGui();
 	}
 	

@@ -1,5 +1,6 @@
 package net.minecraft.client.gui;
 
+import java.awt.Color;
 import java.io.IOException;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.client.settings.GameSettings;
@@ -26,7 +27,9 @@ public class GuiAbout extends GuiScreen
      */
     public void initGui()
     {
-        this.buttonList.add(new GuiOptionButton(231, i1, l, Lang.get("Done")));
+        this.screenTitle = I18n.format("About", new Object[0]);
+        this.buttonList.clear();
+        this.buttonList.add(new GuiButton(200, this.width / 2 - 100, this.height / 6 + 168 + 11, I18n.format("gui.done", new Object[0])));
     }
 
     /**
@@ -35,10 +38,11 @@ public class GuiAbout extends GuiScreen
     protected void actionPerformed(GuiButton button) throws IOException
     {
         if (button.enabled)
-        {
+        { 
             if (button.id == 200)
             {
-                mc.displayGuiScreen(new GuiMainMenu());
+                this.mc.gameSettings.saveOptions();
+                this.mc.displayGuiScreen(this.parentGuiScreen);
             }
         }
     }
@@ -50,28 +54,40 @@ public class GuiAbout extends GuiScreen
     {
         this.drawDefaultBackground();
         this.drawCenteredString(this.fontRendererObj, this.screenTitle, this.width / 2, 15, 16777215);
-        String s = Config.getVersion();
+        String s = "Vex Client";
         String s1 = "HD_U";
 
         if (s1.equals("HD"))
         {
-            s = "OptiFine HD H8";
+            s = "OptiFine HD H8 included!";
         }
 
         if (s1.equals("HD_U"))
         {
-            s = "OptiFine HD H8 Ultra";
+            s = "Optifine HD H8 Ultra included!";
         }
 
         if (s1.equals("L"))
         {
-            s = "OptiFine H8 Light";
+            s = "OptiFine H8 Light included!";
         }
 
-        this.drawString(this.fontRendererObj, s, 2, this.height - 10, 8421504);
-        ;
+        this.drawString(this.fontRendererObj, s, this.width - 950, this.height - 20, -1);
+        String s2 = "Vex Client DEV";
+        int playWidth = this.width - 543; 
+        int madeWidth = this.width - 520;
+        int playHeight = this.height - 300;
+        int madeHeight = this.height - 450;
+        int thxHeight = this.height - 42069;
+        int thxWidth = this.width - 42069;
+        
         int i = this.fontRendererObj.getStringWidth(s2);
-        this.drawString(this.fontRendererObj, s2, this.width - i - 2, this.height - 10, 8421504);
+        
+        this.drawString(this.fontRendererObj, s2, this.width - 85, this.height - 20, -1);
+        this.drawString(this.fontRendererObj, "§bMade by Zaxify", madeWidth, madeHeight, -1);
+        this.drawString(this.fontRendererObj, "Playtested by Downrest", playWidth, playHeight, new Color(0, 255, 0, 170).getRGB());
+        
+        
         super.drawScreen(mouseX, mouseY, partialTicks);
     }
 

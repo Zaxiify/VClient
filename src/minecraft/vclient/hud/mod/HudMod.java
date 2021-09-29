@@ -32,10 +32,10 @@ public class HudMod {
 			//this.y = (int) VClient.INSTANCE.config.config.get(name.toLowerCase() + " y");
 			//this.setEnabled((boolean) VClient.INSTANCE.config.config.get(name.toLowerCase() + " enabled"));
 		} catch (NullPointerException e) {
-			//this.x = x;
-			//this.y = y;
-			//this.enabled = false;
-			//System.err.println("Mods not loaded. Please check any dirty code. If that doesn't work, idk. Go ask zaxify or something.");
+			this.x = x;
+			this.y = y;
+			this.enabled = false;
+			System.err.println("Mods not loaded. Please check any dirty code. If that doesn't work, idk. Go ask zaxify or something.");
 		}
 		
 		settings = new ArrayList<Setting>();
@@ -43,7 +43,7 @@ public class HudMod {
 	}
 	
 	public void addSettings(Setting...sets) {
-//		this.settings.add((Setting) Arrays.asList(sets));
+		this.settings.add((Setting) Arrays.asList(sets));
 	}
 	
 	public int getWidth() {

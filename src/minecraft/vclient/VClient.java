@@ -33,12 +33,14 @@ public class VClient {
 		modManager = new ModManager();
 		hudManager = new HudManager();
 		
+		//§
+		
 		// SET "username" TO SOMEONE WHO YOU WANT TO TEST AS!!!! also uncomment it you dumb fuck of a human being
 		//SessionChanger.getInstance().setUserOffline("username");
 		
 		config.loadModConfig();
 		
-		Display.setTitle(NAMEVER);
+		Display.setTitle("Vex Client Dev | MC 1.8.8");
 		
 		System.out.println("Starting " + NAMEVER + " by " + AUTHOR);
 		

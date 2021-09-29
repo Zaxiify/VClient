@@ -1,5 +1,5 @@
 invertYMouse:false
-mouseSensitivity:0.0
+mouseSensitivity:0.45070422
 fov:0.5
 gamma:1.0
 saturation:0.0
@@ -10,11 +10,11 @@ bobView:false
 anaglyph3d:false
 maxFps:260
 fboEnable:true
-difficulty:0
+difficulty:2
 fancyGraphics:false
 ao:0
 renderClouds:fast
-resourcePacks:["V񗝟C","ResTextures"]
+resourcePacks:["V񗝟C"]
 incompatibleResourcePacks:[]
 lastServer:mc.hypixel.net
 lang:en_US
