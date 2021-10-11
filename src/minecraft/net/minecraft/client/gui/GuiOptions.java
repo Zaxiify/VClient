@@ -78,7 +78,7 @@ public class GuiOptions extends GuiScreen implements GuiYesNoCallback
         }
 
         this.buttonList.add(new GuiButton(110, this.width / 2 - 155, this.height / 6 + 48 - 6, 150, 20, I18n.format("options.skinCustomisation", new Object[0])));
-        this.buttonList.add(new GuiButton(8675309, this.width / 2 + 5, this.height / 6 + 48 - 6, 150, 20, "Super Secret Settings...")
+        this.buttonList.add(new GuiButton(8675309, this.width / 2 + 5, this.height / 6 + 48 - 6, 150, 20, "Vex Settings")
         {
             public void playPressSound(SoundHandler soundHandlerIn)
             {
@@ -158,7 +158,7 @@ public class GuiOptions extends GuiScreen implements GuiYesNoCallback
 
             if (button.id == 8675309)
             {
-                this.mc.entityRenderer.activateNextShader();
+                this.mc.displayGuiScreen(new GuiClientSettings());
             }
 
             if (button.id == 101)

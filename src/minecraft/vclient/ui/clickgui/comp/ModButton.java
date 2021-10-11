@@ -22,8 +22,8 @@ public class ModButton {
 	public void draw() {
 		Gui.drawRect(x, y, x + w, y + h, new Color(0, 0, 0, 170).getRGB());
 		
-		//GOD DAMN IT IVE BEEN STARING AT THIS FOR 5 HOURS ITS 4 AM AUISDHUABUSHFDBFBFKBFBFDJBHJDSFFFFFGvvvvvvvvvvvvvvvvv
-	//	Minecraft.getMinecraft().fontRendererObj.drawString(m.name, 210, 60, -1);
+		//YES YES YES HAHAHAHDA SHDADYES EYS ESYE SY EYS ESY ESY I GOT IT OH MY JESUS CHRIST IVE BEEN TRYING TO SOLVE THIS FOR 24872492347 YEARAS NOW SKAJDBKDB
+    	Minecraft.getMinecraft().fontRendererObj.drawString(m.name, this.x, this.y, getColor());
 	}
 	
 	public int getColor() {

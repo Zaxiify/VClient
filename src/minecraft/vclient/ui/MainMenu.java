@@ -1,6 +1,8 @@
 package vclient.ui;
 
 import java.awt.Color;
+import java.awt.MouseInfo;
+import java.awt.Point;
 import java.io.IOException;
 
 import net.minecraft.client.gui.Gui;
@@ -16,12 +18,30 @@ import vclient.VClient;
 
 public class MainMenu extends GuiScreen{
 	
+	boolean darkMode = false;
+	
+	Point p = MouseInfo.getPointerInfo().getLocation();
+    
+    int getMouseX = p.x;
+    int getMouseY = p.y;
 	@Override
 	public void drawScreen(int mouseX, int mouseY, float partialTicks) {
 		
-	    mc.getTextureManager().bindTexture(new ResourceLocation("vclient/main_menu.png"));
-		this.drawModalRectWithCustomSizedTexture(0, 0, 0, 0, this.width, this.height, this.width, this.height);
+//	    mc.getTextureManager().bindTexture(new ResourceLocation(BG));
+//		this.drawModalRectWithCustomSizedTexture(0, 0, 0, 0, this.width, this.height, this.width, this.height);
+		Point p = MouseInfo.getPointerInfo().getLocation();
+        
+        int getMouseX = p.x;
+        int getMouseY = p.y;
+    	
+    	mc.getTextureManager().bindTexture(new ResourceLocation("vclient/main_menu.png"));
+        Gui.drawModalRectWithCustomSizedTexture(-21 + (getMouseX / 90), ((getMouseY * -1 / 90)), 0, 0, width + 20, height + 20, width + 21, height + 20);
 		
+		if(darkMode == true) {
+			ResourceLocation BG = new ResourceLocation("vclient/dark_mode_main_menu.png");
+		} else {
+			ResourceLocation BG = new ResourceLocation("vclient/main_menu.png");
+		}
 		GlStateManager.pushMatrix();
 		GlStateManager.translate(width/2f, height/2f, 0);
 		GlStateManager.scale(3, 3, 1);

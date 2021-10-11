@@ -271,7 +271,6 @@ public class GameSettings
     public KeyBinding ofKeyBindZoom;
     private File optionsFileOF;
     
-    public KeyBinding TEST_MOD = new KeyBinding("Test Mod", Keyboard.KEY_B, "VClient");
     public KeyBinding HUD_CONFIG = new KeyBinding("Open HUD Screen", Keyboard.KEY_Y, "VClient");
     public KeyBinding CLICK_GUI = new KeyBinding("Opens Click GUI", Keyboard.KEY_RSHIFT, "VClient");
 
@@ -308,7 +307,6 @@ public class GameSettings
     }
     
     private void addClientKeybinds() {
-    	this.keyBindings = ((KeyBinding[])ArrayUtils.add(this.keyBindings, this.TEST_MOD));
     	this.keyBindings = ((KeyBinding[])ArrayUtils.add(this.keyBindings, this.HUD_CONFIG));
     	this.keyBindings = ((KeyBinding[])ArrayUtils.add(this.keyBindings, this.CLICK_GUI));
     	

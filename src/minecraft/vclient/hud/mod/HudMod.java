@@ -30,7 +30,7 @@ public class HudMod {
 		try {
 			//this.x = (int) VClient.INSTANCE.config.config.get(name.toLowerCase() + " x");
 			//this.y = (int) VClient.INSTANCE.config.config.get(name.toLowerCase() + " y");
-			//this.setEnabled((boolean) VClient.INSTANCE.config.config.get(name.toLowerCase() + " enabled"));
+			this.setEnabled((boolean) VClient.INSTANCE.config.config.get(name.toLowerCase() + " enabled"));
 		} catch (NullPointerException e) {
 			this.x = x;
 			this.y = y;

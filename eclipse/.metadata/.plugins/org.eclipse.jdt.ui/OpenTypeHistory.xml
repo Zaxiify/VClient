@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
     <typeInfo handle="=Client/src&lt;net.minecraft.client.entity{EntityPlayerSP.java[EntityPlayerSP" modifiers="1" timestamp="1631395513961"/>
-    <typeInfo handle="=Client/src&lt;net.minecraft.client{Minecraft.java[Minecraft" modifiers="1" timestamp="1632078761455"/>
-    <typeInfo handle="=Client/src&lt;net.minecraft.client.settings{GameSettings.java[GameSettings" modifiers="1" timestamp="1631687946701"/>
+    <typeInfo handle="=Client/src&lt;net.minecraft.client{Minecraft.java[Minecraft" modifiers="1" timestamp="1633322839430"/>
+    <typeInfo handle="=Client/src&lt;net.minecraft.client.settings{GameSettings.java[GameSettings" modifiers="1" timestamp="1632886057863"/>
     <typeInfo handle="=Client/src&lt;net.minecraft.client.renderer.entity.layers{LayerCape.java[LayerCape" modifiers="1" timestamp="1631404529663"/>
     <typeInfo handle="=Client/src&lt;net.minecraft.client.gui{Gui.java[Gui" modifiers="1" timestamp="1631409034037"/>
     <typeInfo handle="=Client/src&lt;net.minecraft.client.renderer.entity{Render.java[Render" modifiers="1025" timestamp="1631730899127"/>

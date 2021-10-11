@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.io.IOException;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.client.settings.GameSettings;
+import net.minecraft.util.ResourceLocation;
 import optifine.Config;
 import optifine.GuiAnimationSettingsOF;
 import optifine.GuiDetailSettingsOF;
@@ -19,7 +20,7 @@ import shadersmod.client.GuiShaders;
 public class GuiAbout extends GuiScreen
 {
     private GuiScreen parentGuiScreen;
-    protected String screenTitle = "About";
+    protected String screenTitle = "About Vex Client";
 
     /**
      * Adds the buttons (and other controls) to the screen in question. Called when the GUI is displayed and when the
@@ -27,9 +28,9 @@ public class GuiAbout extends GuiScreen
      */
     public void initGui()
     {
-        this.screenTitle = I18n.format("About", new Object[0]);
+        this.screenTitle = I18n.format("About Vex Client ", new Object[0]);
         this.buttonList.clear();
-        this.buttonList.add(new GuiButton(200, this.width / 2 - 100, this.height / 6 + 168 + 11, I18n.format("gui.done", new Object[0])));
+        this.buttonList.add(new GuiButton(200, this.width / 2 - 100, this.height / 6 + 370, I18n.format("gui.done", new Object[0])));
     }
 
     /**
@@ -41,7 +42,6 @@ public class GuiAbout extends GuiScreen
         { 
             if (button.id == 200)
             {
-                this.mc.gameSettings.saveOptions();
                 this.mc.displayGuiScreen(this.parentGuiScreen);
             }
         }
@@ -52,9 +52,11 @@ public class GuiAbout extends GuiScreen
      */
     public void drawScreen(int mouseX, int mouseY, float partialTicks)
     {
-        this.drawDefaultBackground();
+    	Gui.drawRect(this.width, this.height, this.width, this.height, new Color(215, 215, 215, 255).getRGB());
+    	mc.getTextureManager().bindTexture(new ResourceLocation("vclient/about_bg.png"));
+		this.drawModalRectWithCustomSizedTexture(0, 0, 0, 0, this.width, this.height, this.width, this.height);
         this.drawCenteredString(this.fontRendererObj, this.screenTitle, this.width / 2, 15, 16777215);
-        String s = "Vex Client";
+        String s = "Optifine installed, but not detected. Please relaunch or reinstall.";
         String s1 = "HD_U";
 
         if (s1.equals("HD"))
@@ -73,7 +75,7 @@ public class GuiAbout extends GuiScreen
         }
 
         this.drawString(this.fontRendererObj, s, this.width - 950, this.height - 20, -1);
-        String s2 = "Vex Client DEV";
+        String s2 = "";
         int playWidth = this.width - 543; 
         int madeWidth = this.width - 520;
         int playHeight = this.height - 300;
@@ -83,9 +85,12 @@ public class GuiAbout extends GuiScreen
         
         int i = this.fontRendererObj.getStringWidth(s2);
         
-        this.drawString(this.fontRendererObj, s2, this.width - 85, this.height - 20, -1);
+        this.drawString(this.fontRendererObj, "§b" + s2, this.width - 85, this.height - 20, -1);
         this.drawString(this.fontRendererObj, "§bMade by Zaxify", madeWidth, madeHeight, -1);
-        this.drawString(this.fontRendererObj, "Playtested by Downrest", playWidth, playHeight, new Color(0, 255, 0, 170).getRGB());
+        this.drawString(this.fontRendererObj, "Playtested by Downrest", playWidth, playHeight, new Color(255, 0, 0, 0).getRGB());
+        this.drawString(this.fontRendererObj, "Special thanks to:", playWidth, playHeight, new Color(255, 0, 0, 0).getRGB());
+        this.drawString(this.fontRendererObj, "Downrest", this.width + 50, madeHeight, new Color(0, 255, 0, 0).getRGB());
+        
         
         
         super.drawScreen(mouseX, mouseY, partialTicks);

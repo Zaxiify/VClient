@@ -9,7 +9,6 @@ public class FPSMod extends HudMod{
 
 	public FPSMod() {
 		super("FPS", 100, 100);
-		// TODO Auto-generated constructor stub
 	}
 	
 	@Override

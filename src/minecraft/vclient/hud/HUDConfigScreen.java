@@ -3,6 +3,7 @@ package vclient.hud;
 import java.io.IOException;
 
 import net.minecraft.client.gui.GuiButton;
+import net.minecraft.client.gui.GuiClientSettings;
 import net.minecraft.client.gui.GuiScreen;
 import vclient.VClient;
 import vclient.hud.mod.HudMod;
@@ -13,7 +14,7 @@ public class HUDConfigScreen extends GuiScreen {
 	@Override
 	public void initGui() {
 		super.initGui();
-		this.buttonList.add(new GuiButton(6340, this.width / 2 - 50, this.height / 2 - 10, 100, 20, "ClickGUI"));
+		this.buttonList.add(new GuiButton(6340, this.width / 2 - 50, this.height / 2 - 10, 115, 20, "Vex Client Settings"));
 	}
 	
 	@Override
@@ -34,7 +35,7 @@ public class HUDConfigScreen extends GuiScreen {
 		super.actionPerformed(button);
 		switch(button.id) {
 		case 6340:
-			mc.displayGuiScreen(new ClickGUI());
+			mc.displayGuiScreen(new GuiClientSettings());
 		}
 	}
 	

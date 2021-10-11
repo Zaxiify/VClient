@@ -1,0 +1,17 @@
+private static ResourceLocation mainMenu = new ResourceLocation("clientimages/menu_background.png");
+    
+    public static void enableDarkerBackground() {
+        mainMenu = new ResourceLocation("clientimages/menu_background-darker.png");
+        mc.getTextureManager().bindTexture(mainMenu);
+        // mc.refreshResources();
+        
+        System.out.println("ENABLEDARKERBACKGROUND() HAS BEEN CALLED!");
+    }
+    
+    public static void disableDarkerBackground() {
+        mainMenu = new ResourceLocation("clientimages/menu_background.png");
+        mc.getTextureManager().bindTexture(mainMenu);
+        // mc.refreshResources();
+        
+        System.out.println("DISABLEDARKERBACKGROUND() HAS BEEN CALLED!");
+    }

@@ -1,9 +1,0 @@
-package vclient.hud.mod.impl;
-
-import net.minecraft.client.Minecraft;
-
-public class CPSMod {
-	
-	public Minecraft mc = Minecraft.getMinecraft();
-	
-}

@@ -15,7 +15,7 @@ import vclient.util.config.Config;
 
 public class VClient {
 	
-	public String NAME = "Vex Client", VERSION = "DEV", AUTHOR = "Zaxify", NAMEVER = NAME+ " " + VERSION;
+	public String NAME = "Vex Client", VERSION = "1.0", AUTHOR = "Zaxify", NAMEVER = NAME+ " " + VERSION;
 	public String DISCORDURL = "DISCORD: dsc.gg/javacraft";
 	public String YTURL = "YOUTUBE : bit.ly/2VJjMqA";
 	public String DISCORDS = "SUPPORT: zaxify#1234 ON DISCORD";
@@ -35,12 +35,12 @@ public class VClient {
 		
 		//§
 		
-		// SET "username" TO SOMEONE WHO YOU WANT TO TEST AS!!!! also uncomment it you dumb fuck of a human being
+		// SET "username" TO SOMEONE WHO YOU WANT TO TEST AS!!!! also uncomment it you dumbass
 		//SessionChanger.getInstance().setUserOffline("username");
 		
 		config.loadModConfig();
 		
-		Display.setTitle("Vex Client Dev | MC 1.8.8");
+		Display.setTitle("Vex Client v1.0 | MC 1.8.8");
 		
 		System.out.println("Starting " + NAMEVER + " by " + AUTHOR);
 		
@@ -55,15 +55,9 @@ public class VClient {
 	
 	@EventTarget
 	public void onTick(ClientTick event) {
-		if(mc.gameSettings.TEST_MOD.isPressed()) {
-			modManager.testMod.toggle();
-		}
 		if(mc.gameSettings.keyBindSprint.isPressed()) {
 			modManager.toggleSprint.toggle();
 		}
-		
-		//GOD DAMN IT I CANT D)OO IT uHGGGGGGGGGFVUIsjgkdfnmdvfbldfkbmnfkjg
-		
 		if(mc.gameSettings.HUD_CONFIG.isPressed()) {
 			mc.displayGuiScreen(new HUDConfigScreen());
 		}

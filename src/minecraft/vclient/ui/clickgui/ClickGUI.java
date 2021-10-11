@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Gui;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.gui.ScaledResolution;
@@ -16,10 +17,8 @@ public class ClickGUI extends GuiScreen {
 	
 	@Override
 	public void initGui() {
-		this.modButtons.add(new ModButton(210, 60, 44, mc.fontRendererObj.FONT_HEIGHT + 5, VClient.INSTANCE.hudManager.testMod));
 		this.modButtons.add(new ModButton(270, 60, 55, mc.fontRendererObj.FONT_HEIGHT + 5, VClient.INSTANCE.hudManager.targetHud));
 		this.modButtons.add(new ModButton(350, 60, 66, mc.fontRendererObj.FONT_HEIGHT + 5, VClient.INSTANCE.hudManager.fps));
-		this.modButtons.add(new ModButton(350, 60, 77, mc.fontRendererObj.FONT_HEIGHT + 5, VClient.INSTANCE.hudManager.cps));
 		this.modButtons.add(new ModButton(420, 60, 88, mc.fontRendererObj.FONT_HEIGHT + 5, VClient.INSTANCE.hudManager.keystrokes));
 		super.initGui();
 	}
@@ -29,7 +28,7 @@ public class ClickGUI extends GuiScreen {
 		ScaledResolution sr = new ScaledResolution(mc);
 		super.drawScreen(mouseX, mouseY, partialTicks);
 		
-		Gui.drawRect(200, 50, sr.getScaledWidth() - 200, sr.getScaledHeight() - 50, new Color(0, 0, 0, 170).getRGB());
+		this.drawDefaultBackground();
 		
 		for(ModButton m : modButtons) {
 			m.draw();
