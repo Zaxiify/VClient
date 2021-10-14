@@ -196,7 +196,7 @@ public class ModelBlock
             }
             catch (NullPointerException var5)
             {
-                System.out.println("ModelBlock checkModelHierarchy is not working. help help help help helph elp");;
+                var5.printStackTrace();
             }
         }
     }

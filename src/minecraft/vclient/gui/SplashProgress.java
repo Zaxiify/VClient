@@ -76,7 +76,7 @@ public class SplashProgress {
 		}
 		
 		if(ufr == null) {
-			ufr = UnicodeFontRenderer.getFontOnPC("Arial", 20);
+			ufr = UnicodeFontRenderer.getFontOnPC("monsterrat", 20);
 		}
 		
 		ScaledResolution sr = new ScaledResolution(Minecraft.getMinecraft());

@@ -15,6 +15,7 @@ import net.minecraft.client.gui.GuiSelectWorld;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.util.ResourceLocation;
 import vclient.VClient;
+import vclient.fontrenderer.HyperiumFontRenderer;
 
 public class MainMenu extends GuiScreen{
 	
@@ -49,9 +50,10 @@ public class MainMenu extends GuiScreen{
 		
 		GlStateManager.popMatrix();
 		super.drawScreen(mouseX, mouseY, partialTicks);
-		mc.fontRendererObj.drawStringWithShadow(VClient.INSTANCE.DISCORDURL, width/2f - 30, height/2f + 255- mc.fontRendererObj.FONT_HEIGHT * 2f, -1);
-		mc.fontRendererObj.drawStringWithShadow(VClient.INSTANCE.YTURL, width/2f + 120, height/2f + 255- mc.fontRendererObj.FONT_HEIGHT * 2f, -1);
-		mc.fontRendererObj.drawStringWithShadow(VClient.INSTANCE.DISCORDS, width/2f - 225, height/2f + 255- mc.fontRendererObj.FONT_HEIGHT * 2f, -1);
+		HyperiumFontRenderer.customFontLight.drawCenteredString(VClient.INSTANCE.DISCORDURL, width/2f + 20, height/2f + 255 - mc.fontRendererObj.FONT_HEIGHT * 2f, 1);
+		HyperiumFontRenderer.customFontLight.drawCenteredString(VClient.INSTANCE.YTURL, width/2f + 155, height/2f + 255 - mc.fontRendererObj.FONT_HEIGHT * 2f, 1);
+		HyperiumFontRenderer.customFontLight.drawCenteredString(VClient.INSTANCE.DISCORDS, width/2f - 155, height/2f + 255 - mc.fontRendererObj.FONT_HEIGHT * 2f, 1);
+		HyperiumFontRenderer.customFontLight.drawStringScaled(VClient.INSTANCE.NAMEVER, width/2 - 445, height/2 + 255 - mc.fontRendererObj.FONT_HEIGHT * 43, -1, 2.5);
 		
 	}
 	

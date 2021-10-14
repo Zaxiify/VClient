@@ -138,7 +138,7 @@ public class UnicodeFontRenderer {
     }
 
     private Font getFontByName(String name) throws IOException, FontFormatException {
-        return getFontFromInput("/assets/minecraft/clientname/fonts/" + name + ".ttf");
+        return getFontFromInput("/assets/minecraft/vclient/fonts" + name + ".ttf");
     }
 
     private Font getFontFromInput(String path) throws IOException, FontFormatException {
