@@ -14,25 +14,42 @@ import optifine.GuiQualitySettingsOF;
 import optifine.Lang;
 import optifine.TooltipManager;
 import shadersmod.client.GuiShaders;
+import vclient.VClient;
+import vclient.ui.MainMenu;
+import vclient.util.SessionChanger;
 
 public class GuiClientSettings extends GuiScreen
 {
     private GuiScreen parentGuiScreen;
     protected String screenTitle = "love bts";
+    
+    public String darkModeString = "";
+    public int darkModeButtonId = 0;
     /**
      * Adds the buttons (and other controls) to the screen in question. Called when the GUI is displayed and when the
      * window resizes, the buttonList is cleared beforehand.
      */
     public void initGui()
     {
-        this.screenTitle = I18n.format("qwrkefsjf", new Object[0]);
+        this.screenTitle = I18n.format("Vex Client Settings", new Object[0]);
         this.buttonList.clear();
         
-        this.buttonList.add(new GuiOptionButton(202, 100, 100, I18n.format("kdfns", new Object[0])));
-        this.buttonList.add(new GuiOptionButton(201, 200, 200, I18n.format("Toggle Dark Mode", new Object[0])));
-        this.buttonList.add(new GuiOptionButton(212, 250, 300, I18n.format("gggg,,,,,,,,,,,,", new Object[0])));
+        this.buttonList.add(new GuiOptionButton(201, 400, 200, I18n.format("Dark Mode On", new Object[0])));
+        this.buttonList.add(new GuiOptionButton(202, 400, 400, I18n.format("Dark Mode Off", new Object[0])));
+        this.buttonList.add(new GuiOptionButton(203, 400, 600, I18n.format("Dark Mode Off", new Object[0])));
+        
+        
+        if(VClient.INSTANCE.darkMode == true) {
+        	this.darkModeString = "Dark Mode Off";
+        	this.darkModeButtonId = 202;
+        } else {
+        	this.darkModeString = "Dark Mode On";
+        	this.darkModeButtonId = 201;
+        }
+        
    
         this.buttonList.add(new GuiButton(200, this.width / 2 - 100, this.height / 6 + 168 + 11, I18n.format("gui.done", new Object[0])));
+        
     }
 
     /**
@@ -52,14 +69,24 @@ public class GuiClientSettings extends GuiScreen
             if (button.id == 201)
             {
                 this.mc.gameSettings.saveOptions();
-               System.out.println("201");
+               System.out.println("GuiClientSettings: Dark Mode On");
+               VClient.INSTANCE.darkMode = true;
             }
 
             if (button.id == 202)
             {
                 this.mc.gameSettings.saveOptions();
-                System.out.println("202");
+                System.out.println("GuiClientSettings: Dark Mode Off");
+                VClient.INSTANCE.darkMode = false;
                 
+            }
+            
+            if(button.id == 203) {
+            	
+            	this.mc.gameSettings.saveOptions();
+            	System.out.println("GuiClientSettings: Set name to ncai because owner aisdkna");
+            	SessionChanger.getInstance().setUserOffline("ncai");
+            	
             }
 
             

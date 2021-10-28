@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="getFontByName"/>
+		<item key="selection" value="HyperiumFontRenderer.drawCenteredString"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="this.drawCenteredString"/>
+			<item value="GuiButton"/>
+			<item value="GuiButtonAnimatedExample"/>
+			<item value="GuiButtonAnimated"/>
 			<item value="getFontByName"/>
 			<item value="HyperiumFontRenderer"/>
 			<item value="customFontLight"/>
@@ -19,12 +23,10 @@
 			<item value="client"/>
 			<item value="drawSplash"/>
 			<item value="8675309"/>
-			<item value="super"/>
-			<item value="setTitle"/>
-			<item value="start"/>
-			<item value="getLook"/>
 		</list>
 		<list key="replacehistory">
+			<item value="HyperiumFontRenderer.drawCenteredString"/>
+			<item value="GuiAnimatedButton"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

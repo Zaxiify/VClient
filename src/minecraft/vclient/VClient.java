@@ -1,8 +1,12 @@
 package vclient;
 
+import java.io.IOException;
+
+import org.apache.http.impl.conn.AbstractPoolEntry;
 import org.lwjgl.opengl.Display;
 
 import net.minecraft.client.Minecraft;
+import net.minecraft.util.ResourceLocation;
 import vclient.event.EventManager;
 import vclient.event.EventTarget;
 import vclient.event.impl.ClientTick;
@@ -27,6 +31,10 @@ public class VClient {
 	public ModManager modManager;
 	public HudManager hudManager;
 	
+	public boolean darkMode = false;
+	
+	
+	
 	public void startup() {
 		eventManager = new EventManager();
 		config = new Config();
@@ -36,7 +44,7 @@ public class VClient {
 		//§
 		
 		// SET "username" TO SOMEONE WHO YOU WANT TO TEST AS!!!! also uncomment it you dumbass
-		SessionChanger.getInstance().setUserOffline("ncai");
+		//SessionChanger.getInstance().setUserOffline("ncai");
 		
 		config.loadModConfig();
 		
@@ -73,5 +81,17 @@ public class VClient {
 			mc.displayGuiScreen(new ClickGUI());
 		}
 	}
+	
+	public void enableDarkMode() {
+		
+		if(darkMode == true) {
+			ResourceLocation BG = new ResourceLocation("vclient/dark_mode_main_menu.png");
+			System.out.println("MainMenu: Dark Mode On");
+		} else {
+			ResourceLocation BG = new ResourceLocation("vclient/main_menu.png");
+			System.out.println("MainMenu: Dark Mode Off");
+		}
+	}
+
 	
 }

@@ -69,6 +69,11 @@ public abstract class GuiScreen extends Gui implements GuiYesNoCallback
     /** The height of the screen object. */
     public int height;
     protected List<GuiButton> buttonList = Lists.<GuiButton>newArrayList();
+    
+    //DEPRECATED - bc no need anymore!!!!!!!!!!!! (but may use in future)
+    protected List<GuiMainMenuButton> buttonMainMenuList = Lists.<GuiMainMenuButton>newArrayList();
+    
+    //used in vclient.ui.MainMenu
     protected List<GuiLabel> labelList = Lists.<GuiLabel>newArrayList();
     public boolean allowUserInput;
 
@@ -538,6 +543,10 @@ public abstract class GuiScreen extends Gui implements GuiYesNoCallback
      * Called by the controls from the buttonList when activated. (Mouse pressed for buttons)
      */
     protected void actionPerformed(GuiButton button) throws IOException
+    {
+    }
+    
+    protected void actionPerformed(GuiMainMenuButton button) throws IOException
     {
     }
 

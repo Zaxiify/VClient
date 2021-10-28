@@ -8,6 +8,7 @@ public enum Category {
 	MISC,
 	MOVEMENT,
 	PVP,
-	COSMETIC;
+	COSMETIC,
+	GUI;
 	
 }
